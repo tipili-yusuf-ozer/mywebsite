@@ -1,0 +1,127 @@
+
+@keyframes bg-fadein {
+    from{
+
+    }
+    to{
+        background-color: black;
+    }
+}
+.card{
+    animation: shuffle 2s cubic-bezier(0.075, 0.82, 0.165, 1) 500ms 1 normal forwards;
+    animation-duration: 2s !important;
+    animation-play-state: paused;
+}
+@keyframes shuffle{
+    from{}
+    to{
+        transform: translate(0,0);
+    }
+}
+.sidebar-text p,
+.sidebar-text a,
+.sidebar-text button,
+.sidebar-text h1,
+.sidebar-text h2,
+.sidebar-text h3,
+.sidebar-text h4,
+.sidebar-text h5,
+.sidebar-text h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-namebar{
+    border: 2px solid black;
+    border-radius: 30%;
+}
+.contact-me-button{
+    background-color:  blue;
+    border: 5px ridge white;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+.animated-border{
+    margin-top: 1rem;
+    animation: animation-border 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1ms 1 normal both;
+    border-bottom: 3px groove black;
+    position: relative;
+    width: 50%;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem !important;
+    }
+    @keyframes animation-border {
+        from{
+            width: 0%;
+            // visibility: visible;
+        }
+        to{
+        width: 50%;
+        }
+    }
+.pop-text{
+    visibility: hidden;
+    position: relative;
+    animation: text-pop 1500ms cubic-bezier(0.5, 0, 0.75, 0) 1ms 1 normal backwards;
+}
+@keyframes text-pop{
+    from{
+       bottom: 300px;
+
+       visibility: visible; 
+    }
+    85%{
+        bottom:-50px
+    }
+    to{
+        bottom: 0px;
+    }
+
+}
+.background-anim{
+    animation: animation-bg 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms 1 normal backwards;
+}
+@keyframes animation-bg{
+    from{
+        background-color: aliceblue;
+        top: 50%;
+        bottom: 50%;
+        right: 50%;
+        left: 40%;
+    }
+    to{
+        background-color: black;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.cursor-blink{
+    text-decoration: none;
+    font-size: xxx-large;
+    display: none;
+    visibility: visible !important;
+    animation-play-state:paused;
+    animation-duration:400ms;
+    animation-name: Blink;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes Blink{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0; 
+    }
+}
+// .card{
+//     animation: shuffle 3 cubic-bezier(0.55, 0.085, 0.68, 0.53) 0 1 normal none;
+// }
+// @keyframes shuffle {
+//     from{
+//         position: absolute !important;
+//     }
+//     to{
+//         position: relative !important;
+//     }
+// }

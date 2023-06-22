@@ -1,0 +1,333 @@
+@import "../bootstrap/scss/bootstrap";
+
+
+$carousel-control-width: 5%;
+/**Main Compoments
+*
+*/
+.bg-fade-anim{
+    animation: bg-fadein 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0ms 1 forwards;
+}
+html{
+
+    font-size: 24px !important;
+}
+.sidebar{
+    width: 40% !important;
+    top: 0;
+    bottom: 0;
+    position: fixed !important;
+    flex-direction: column;
+}
+.main{
+    position:absolute;
+    right: 0 !important;
+    width: 60% !important;
+}
+/**Sidebar compoments
+*
+*
+*
+*/
+
+/*Sidebar header
+*
+*/
+.sidebar-header{
+    position: relative;
+    top:0;
+    width: 100%;
+    flex-direction: row;
+}
+.container-namebar{ //border-properties are at dynamic
+    align-self: center;
+    width: max-content;
+    padding-top: 1rem;
+    margin-top: 5rem !important;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem !important;
+    padding-left: .5rem;
+    margin-left:  1rem !important;
+    padding-right: 6rem;
+    margin-right: 1.5rem !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.sidebar-header-pp{
+display: none !important;
+align-content: center;
+width: 100%;
+}
+
+
+/**Sidebar Panel
+*
+*
+*/
+.container-sidepanel{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+.container-sidepanel li{
+display: inline;
+}
+/** Sidepanel pp
+*
+*/
+.container-pp{
+    height: 100%;
+    width: 60%;
+}
+.sidenav-pp{
+    display:none !important;
+}
+/**Sidepanel nav
+*
+*/
+.container-sidenav{
+    height: 100%;
+    width: 40%;
+}
+.sidenav-header{
+    position :relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none !important;
+}
+.sidebar-list{
+    font-size: x-large;
+    width: 100%;
+    position: relative;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+.sidebar-list > li{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.sidebar-item{
+
+    display: flex;
+    @extend .text-center;
+     @extend .border;
+     @extend .border-end-0;
+     @extend .border-start-0; 
+    border-color: #297955 !important;
+    @extend .justify-content-center;
+}
+/**Main Compomonents
+*
+*
+*
+*/
+/**
+*General
+*/
+.seperate-content >*{ /*apply margin to containers in the middle */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.full-span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+}
+
+.full-span:hover{
+opacity: 1 !important;
+}
+.background-img{
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/**Header Main
+*
+*/
+.main-header{
+    @extend .d-flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+}
+.header-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-list > *{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.contact-me-button{
+    font-size: xxx-large;
+    text-decoration: none;
+}
+/**Aboutme
+*
+*/
+#aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutme h1,
+#aboutme p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+/**Carousel
+*
+*/
+.container-carousel{
+    @extend .container;
+    @extend .border;
+    background-color: black;
+}
+// .carousel-inner{
+//     visibility: hidden;
+// }
+.carousel-item-own{ //bs class
+    padding-bottom: 50px; /*paddings for control buttons*/
+    padding-left: 10px;
+    padding-right: 20px;
+    display: none;
+    flex-direction: column;
+}
+.carousel-item-active{
+    display: flex;
+}
+.carousel-control-prev,.carousel-control-next{ //bs class
+    height: fit-content; 
+    top: 40%;
+}
+#carousel-container p,
+#carousel-container h2,
+#carousel-container h4,
+#carousel-container a{
+    font-family: 'VT323', monospace !important;
+    color:#297955;
+}
+// .animate-text > p,
+// .animate-text > h2,
+// .animate-text > h1,
+// .animate-text > h3,
+// .animate-text > h4,
+// .animate-text > h5,
+// .animate-text > h6{
+// // visibility: hidden;
+// }
+
+/**
+*Reading
+*/
+#reading{
+    margin-top: 20px;
+}
+.card-container{
+    @extend .container;
+    @extend .row;
+    justify-content: center;
+    padding-left: 50px;
+    margin: 0 !important;
+    padding-right: 50px;
+    display: flex;
+    position: relative;
+
+}
+.card{ //bs class
+    margin-top: 3rem;
+    position: relative !important;
+    isolation: isolate;
+    align-self: center !important;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.container-card-hover{
+    @extend .full-span;
+    top: 50%;
+    opacity: 0,5;
+    // background-color: rgba($color: #FFFFFFFF, $alpha: 0.5);
+    display: none;
+}
+.card-hover-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+#reading p,
+#reading h4,
+#reading h1{
+    font-family: 'Newsreader', serif !important;
+}
+/**Breakoint Rules
+*
+*/
+@include media-breakpoint-down(xxl){
+    .sidebar-list{
+        font-size: large !important;
+    }
+}
+@include media-breakpoint-down(xl){
+    .sidebar{
+    width: 25% !important;
+    }
+    .sidebar-header{
+        display: none !important;
+    }
+    .container-namebar{
+        width: 100%;
+        margin: 0;
+        border: 0;
+        // padding-left: 0.5rem;
+        // padding-right: 1.5rem;
+        // padding-top: 1rem;
+        // padding-bottom: 1rem;
+    }
+    .sidenav-header{
+        display: flex !important;
+    }
+    .sidenav-pp{
+        display: block !important;
+    }
+    
+    .container-pp{
+        display: none !important;
+    }
+    .sidebar-list >li{
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important; 
+    }
+    .container-sidenav{
+        width: 100% !important;
+    }
+    .main{
+        width: 75% !important;
+    }
+}
+@include media-breakpoint-down(md){
+    .sidebar{
+        display: none;
+    }
+    .main{
+        width: 100%;
+    }
+    .container-sidenav{
+        display: none;
+    }
+}
